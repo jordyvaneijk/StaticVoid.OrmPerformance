@@ -2,11 +2,10 @@
 
 open System.Data.Linq
 open System.Data.EntityClient
-open FSharp.Data.TypeProviders
+open Microsoft.FSharp.Data.TypeProviders
 open StaticVoid.OrmPerformance.Harness.Contract
-open FSharp.Data.Runtime
 
-type internal TestDb = SqlEntityConnection<ConnectionStringName="TestDB",Pluralize=true> //SqlEntityConnection<ConnectionString="Server=localhost;Database=StaticVoid.OrmPerformance.Test;Integrated Security=SSPI;MultipleActiveResultSets=true", Pluralize=true>
+type internal TestDb = SqlEntityConnection<ConnectionStringName="TestDB", Pluralize=true>
 
 [<AutoOpen>]
 module internal DbExtensions =
